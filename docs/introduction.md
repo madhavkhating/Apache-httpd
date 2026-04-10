@@ -49,6 +49,12 @@ $sudo systemctl status -l httpd.service
 
 ![1](https://github.com/user-attachments/assets/18c12f2f-c64c-440b-b425-5f7bc0a45e95)
 
+#Confirm it is listening on port 80
+$ss -tlnp | grep :80
 
+#Quick test from localhost
+$curl -I http://localhost
+
+![2](https://github.com/user-attachments/assets/b8dc6594-1443-4c6c-a978-261aede086ac)
 
 
