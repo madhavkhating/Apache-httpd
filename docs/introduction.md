@@ -21,12 +21,10 @@ On RHEL 9, Apache HTTP Server (httpd) stores its main log files under /var/log/h
 
 **Default RHEL 9 log file locations**
   * Error log (main):
-    
-    /var/log/httpd/error_log   :   This is where Apache writes startup errors, configuration‑related issues, and per‑request errors (5xx, SSL, module failures, etc.).
+        /var/log/httpd/error_log   :   This is where Apache writes startup errors, configuration‑related issues, and per‑request errors (5xx, SSL, module failures, etc.).
     
   * Access log (main):
-    
-    /var/log/httpd/access_log  :  This records HTTP requests (client IP, method, URL, status code, bytes, etc.), typically using the combined or common format.
+        /var/log/httpd/access_log  :  This records HTTP requests (client IP, method, URL, status code, bytes, etc.), typically using the combined or common format.
 ## Starting Apache httpd on RHEL9
 To start Apache HTTPD (httpd) on RHEL 9, you use the standard systemd service commands. By default Apache listens on port 80, and the service is managed as httpd.
 Basic start and enable commands, Run these as root or with sudo:
@@ -45,6 +43,7 @@ $sudo systemctl start httpd
 $sudo systemctl enable httpd
 
 #Check httpd status with 
+
 $sudo systemctl status -l httpd.service
 
 ![1](https://github.com/user-attachments/assets/18c12f2f-c64c-440b-b425-5f7bc0a45e95)
@@ -53,6 +52,7 @@ $sudo systemctl status -l httpd.service
 $ss -tlnp | grep :80
 
 #Quick test from localhost
+
 $curl -I http://localhost
 
 ![2](https://github.com/user-attachments/assets/b8dc6594-1443-4c6c-a978-261aede086ac)
